@@ -12,7 +12,7 @@ const Navbar = () => {
   const handelSearch = (e) => {
     dispatch(filterProducts(e.target.value));
   };
-  
+
   return (
     <div className="sticky top-0 z-50 w-full px-4 md:px-8 pt-6">
       <nav className="max-w-7xl mx-auto bg-white/80 backdrop-blur-2xl border border-white/40 shadow-[0_20px_50px_rgba(0,0,0,0.04)] rounded-[2.5rem] px-8 py-3 flex items-center justify-between transition-all duration-500">
@@ -84,22 +84,6 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-
-          <div className="h-8 w-[1px] bg-gray-100 mx-1 hidden lg:block" />
-
-          {/* User Section */}
-          <button className="hidden lg:flex items-center gap-3 p-1 pr-4 bg-gray-50 rounded-full border border-gray-100 hover:border-[#103639] transition-all group">
-            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-[#103639] group-hover:text-white transition-colors">
-              <User size={14} />
-            </div>
-            <span className="text-[10px] font-bold text-[#050515] uppercase tracking-wider">
-              Portal
-            </span>
-          </button>
-
-          <button className="p-2.5 text-gray-400 hover:text-[#050515] lg:hidden">
-            <Menu size={24} />
-          </button>
         </div>
       </nav>
     </div>
