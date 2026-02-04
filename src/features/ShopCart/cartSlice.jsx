@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loadCartFromStorag } from "../../utilities/cartStorage";
+
+const storedItems = loadCartFromStorag();
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    items: [], // Final Cart Item
-    tempItems: [], // Temporary Cart Item
+    items: storedItems, // Final Cart Item
+    tempItems: storedItems, // Temporary Cart Item
     totalPrice: 0,
   },
 
